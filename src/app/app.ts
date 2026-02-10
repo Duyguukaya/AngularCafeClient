@@ -7,5 +7,8 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('AngularCafeClient');
+
+  title:string="Merhaba Angular Projesi"
 }
+
+
