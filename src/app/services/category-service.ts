@@ -14,4 +14,8 @@ export class CategoryService {
     return this.http.get<CategoryModel[]>(this.apiUrl);
   }
 
+  create(model:CategoryModel){
+    return this.http.post<CategoryModel>(this.apiUrl,model);
+  }
+
 }

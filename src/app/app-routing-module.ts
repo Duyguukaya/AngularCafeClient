@@ -7,6 +7,7 @@ import { AdminLayout } from './layouts/admin-layout/admin-layout';
 import { Category } from './admin-components/category/category';
 import { Menu } from './admin-components/menu/menu';
 import { About } from './admin-components/about/about';
+import { CreateCategory } from './admin-components/category/create-category/create-category';
 
 const routes: Routes = [
   //ui-Route
@@ -18,6 +19,7 @@ const routes: Routes = [
   //admin-Route
   {path:'admin',component:AdminLayout,children:[
     {path:'category',component:Category},
+    {path:'category/create',component:CreateCategory},
     {path:'menu',component:Menu},
     {path:'about',component:About}
   ]}
