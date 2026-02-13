@@ -15,4 +15,12 @@ export class Category {
 
   categories = toSignal(this.categoryService.getAll(),{initialValue:[]})
 
+  delete(id:number){
+    if(confirm('Silmek istediğinize emin misiniz?')){
+      this.categoryService.delete(id).subscribe({
+        next:()=> window.location.reload()
+      });
+    }
+  }
+
 }

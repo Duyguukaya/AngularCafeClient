@@ -16,7 +16,7 @@
     <td>{{$index+1}}</td>
     <td>{{item.name}}</td>
     <td>
-      <a class="btn btn-danger">Sil</a>
+      <a class="btn btn-danger" (click)="delete(item.id)">Sil</a>
       <a class="btn btn-info ms-2">Güncelle</a>
     </td>
   </tr>

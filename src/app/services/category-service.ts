@@ -8,7 +8,7 @@ import { CategoryModel } from '../models/categoryModel';
 export class CategoryService {
 
   private http = inject(HttpClient);
-  apiUrl="https://localhost:7000/api/categories"
+  apiUrl="https://localhost:7000/api/categories/"
 
   getAll(){
     return this.http.get<CategoryModel[]>(this.apiUrl);
@@ -16,6 +16,10 @@ export class CategoryService {
 
   create(model:CategoryModel){
     return this.http.post<CategoryModel>(this.apiUrl,model);
+  }
+
+  delete(id:number){
+    return this.http.delete(this.apiUrl+id);
   }
 
 }
