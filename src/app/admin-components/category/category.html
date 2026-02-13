@@ -5,8 +5,10 @@
     <th>#</th>
     <th>Kategori Adı</th>
   </tr>
-  <tr *ngFor="let category of getCategories()">
-    <td>{{category.id}}</td>
-    <td>{{category.name}}</td>
+  @for (item of categories(); track $index) {
+  <tr >
+    <td>{{item.id}}</td>
+    <td>{{item.name}}</td>
   </tr>
+  }
 </table>

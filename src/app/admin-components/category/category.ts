@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CategoryModel } from '../../models/categoryModel';
+import { CategoryService } from '../../services/category-service';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-category',
@@ -9,12 +11,8 @@ import { CategoryModel } from '../../models/categoryModel';
 })
 export class Category {
 
+  private categoryService = inject(CategoryService);
 
-  categories:CategoryModel[] = [{id:1,name:'Kahveler'},{id:2,name:'Tatlılar'},{id:3,name:'İçecekler'}]
-
-
-  getCategories(){
-    return this.categories;
-  }
+  categories = toSignal(this.categoryService.getAll(),{initialValue:[]})
 
 }
