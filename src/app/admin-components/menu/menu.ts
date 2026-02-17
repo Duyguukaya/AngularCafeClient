@@ -38,7 +38,10 @@ export class Menu {
       icon: "success"
     });
 
-    window.location.reload();
+    setTimeout(() => {
+      window.location.reload()
+    }, 1000);
+
       }
     })
 
