@@ -22,4 +22,12 @@ export class CategoryService {
     return this.http.delete(this.apiUrl+id);
   }
 
+  getById(id){
+    return this.http.get<CategoryModel>(this.apiUrl+id);
+  }
+
+  update(id:number,model:CategoryModel){
+    return this.http.put(this.apiUrl+id,model);
+  }
+
 }
