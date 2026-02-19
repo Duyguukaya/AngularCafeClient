@@ -35,7 +35,8 @@ export class Menu {
           Swal.fire({
       title: "Silindi!",
       text: "Silme işleminiz başarıyla gerçekleşti.",
-      icon: "success"
+      icon: "success",
+      showConfirmButton:false
     });
 
     setTimeout(() => {

@@ -9,6 +9,7 @@ import { Menu } from './admin-components/menu/menu';
 import { About } from './admin-components/about/about';
 import { CreateCategory } from './admin-components/category/create-category/create-category';
 import { UpdateCategory } from './admin-components/category/update-category/update-category';
+import { CreateMenu } from './admin-components/menu/create-menu/create-menu';
 
 const routes: Routes = [
   //ui-Route
@@ -23,9 +24,9 @@ const routes: Routes = [
     {path:'category/create',component:CreateCategory},
     {path:'category/update/:id',component:UpdateCategory},
     {path:'menu',component:Menu},
+    {path:'menu/create',component:CreateMenu},
     {path:'about',component:About}
   ]}
-
 ];
 
 @NgModule({

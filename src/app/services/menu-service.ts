@@ -28,5 +28,4 @@ export class MenuService {
   delete(id:number){
     return this.http.delete(this.apiUrl+id);
   }
-
 }

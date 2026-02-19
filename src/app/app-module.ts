@@ -14,6 +14,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CreateCategory } from './admin-components/category/create-category/create-category';
 import { UpdateCategory } from './admin-components/category/update-category/update-category';
+import { CreateMenu } from './admin-components/menu/create-menu/create-menu';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { UpdateCategory } from './admin-components/category/update-category/upda
     Menu,
     About,
     CreateCategory,
-    UpdateCategory
+    UpdateCategory,
+    CreateMenu
   ],
   imports: [
     BrowserModule,
