@@ -1,0 +1,42 @@
+import { MenuService } from './../../../services/menu-service';
+import { Component, Input, OnInit, inject, model } from '@angular/core';
+import { MenuModel } from '../../../models/menuModel';
+import { CategoryService } from '../../../services/category-service';
+import { Router } from '@angular/router';
+import { toSignal } from '@angular/core/rxjs-interop';
+
+@Component({
+  selector: 'app-update-menu',
+  standalone: false,
+  templateUrl: './update-menu.html',
+  styleUrl: './update-menu.css',
+})
+export class UpdateMenu implements OnInit {
+
+  private menuService = inject(MenuService);
+  private categoryService = inject(CategoryService);
+  private router = inject(Router);
+  menu: MenuModel = new MenuModel();
+  @Input() id: string;
+
+  ngOnInit(): void {
+
+    const menuId = Number(this.id);
+
+    this.menuService.getById(menuId).subscribe({
+      next: data => this.menu=data
+    });
+  }
+
+
+
+categories = toSignal(this.categoryService.getAll(),{initialValue:[]})
+
+update(){
+  this.menuService.update(this.menu.id,this.menu).subscribe({
+    complete: ()=> this.router.navigate(['admin/menu']),
+    error: err=> console.error(err)
+  });
+}
+
+}

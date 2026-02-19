@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { CreateCategory } from './admin-components/category/create-category/create-category';
 import { UpdateCategory } from './admin-components/category/update-category/update-category';
 import { CreateMenu } from './admin-components/menu/create-menu/create-menu';
+import { UpdateMenu } from './admin-components/menu/update-menu/update-menu';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CreateMenu } from './admin-components/menu/create-menu/create-menu';
     About,
     CreateCategory,
     UpdateCategory,
-    CreateMenu
+    CreateMenu,
+    UpdateMenu
   ],
   imports: [
     BrowserModule,
