@@ -1,5 +1,5 @@
 import { MenuService } from './../../../services/menu-service';
-import { Component, Input, OnInit, inject, model } from '@angular/core';
+import { ChangeDetectorRef, Component, Input, OnInit, inject, model } from '@angular/core';
 import { MenuModel } from '../../../models/menuModel';
 import { CategoryService } from '../../../services/category-service';
 import { Router } from '@angular/router';
@@ -16,15 +16,21 @@ export class UpdateMenu implements OnInit {
   private menuService = inject(MenuService);
   private categoryService = inject(CategoryService);
   private router = inject(Router);
+  private cdr = inject(ChangeDetectorRef);
+
   menu: MenuModel = new MenuModel();
   @Input() id: string;
+
 
   ngOnInit(): void {
 
     const menuId = Number(this.id);
 
     this.menuService.getById(menuId).subscribe({
-      next: data => this.menu=data
+      next: data => {
+        this.menu=data
+        this.cdr.detectChanges();
+      }
     });
   }
 

@@ -16,6 +16,7 @@ import { CreateCategory } from './admin-components/category/create-category/crea
 import { UpdateCategory } from './admin-components/category/update-category/update-category';
 import { CreateMenu } from './admin-components/menu/create-menu/create-menu';
 import { UpdateMenu } from './admin-components/menu/update-menu/update-menu';
+import { BannerUi } from './ui-components/banner-ui/banner-ui';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { UpdateMenu } from './admin-components/menu/update-menu/update-menu';
     CreateCategory,
     UpdateCategory,
     CreateMenu,
-    UpdateMenu
+    UpdateMenu,
+    BannerUi
   ],
   imports: [
     BrowserModule,
