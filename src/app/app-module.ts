@@ -21,6 +21,7 @@ import { MenuUi } from './ui-components/menu-ui/menu-ui';
 import { BrewUi } from './ui-components/brew-ui/brew-ui';
 import { TestimonialUi } from './ui-components/testimonial-ui/testimonial-ui';
 import { GaleriUi } from './ui-components/galeri-ui/galeri-ui';
+import { MenuAllUi } from './ui-components/menu-all-ui/menu-all-ui';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { GaleriUi } from './ui-components/galeri-ui/galeri-ui';
     MenuUi,
     BrewUi,
     TestimonialUi,
-    GaleriUi
+    GaleriUi,
+    MenuAllUi
   ],
   imports: [
     BrowserModule,
