@@ -17,6 +17,10 @@ import { UpdateCategory } from './admin-components/category/update-category/upda
 import { CreateMenu } from './admin-components/menu/create-menu/create-menu';
 import { UpdateMenu } from './admin-components/menu/update-menu/update-menu';
 import { BannerUi } from './ui-components/banner-ui/banner-ui';
+import { MenuUi } from './ui-components/menu-ui/menu-ui';
+import { BrewUi } from './ui-components/brew-ui/brew-ui';
+import { TestimonialUi } from './ui-components/testimonial-ui/testimonial-ui';
+import { GaleriUi } from './ui-components/galeri-ui/galeri-ui';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { BannerUi } from './ui-components/banner-ui/banner-ui';
     UpdateCategory,
     CreateMenu,
     UpdateMenu,
-    BannerUi
+    BannerUi,
+    MenuUi,
+    BrewUi,
+    TestimonialUi,
+    GaleriUi
   ],
   imports: [
     BrowserModule,
